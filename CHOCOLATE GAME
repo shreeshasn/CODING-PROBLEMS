@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	int n=1, m=6, i=1;
+    for(i=1; n>=0&&m>=0; i++)
+    {
+        if(i%2==1)
+		{
+			m=m+i;	n=n-i; 	
+		}
+		else{
+			m=m-i;	n=n+i;	
+		}
+    }
+	printf("the no of times :%d \n", i-1);
+	if(n<0)
+		printf("Y is Winner.");
+	else
+		printf("X is Winner.");
+}
