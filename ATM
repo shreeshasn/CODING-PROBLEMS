@@ -1,0 +1,26 @@
+d={"abcd":1234, "ef":567}
+b={"abcd":99000, "ef":5000}
+while True:
+    id=input('\n MAIN MENU \n Enter CARD ID \n')
+    pw=int(input('\n MAIN MENU \n Enter CARD PW \n'))
+    if d[id]==pw:
+        c=1
+        while c==1 and d[id]==pw:
+            print('\n ENTER OPTIONS: \n ')
+            print('\n 1. DEPOSIT \t 2. WITHDRAW \t 3. BALANCE \t 4. CHANGE PW \t 5. EXIT \n')
+            ch=int(input())
+            if ch==1:
+                dep=int(input('\n ENTER DEPOSIT MONEY \n'))
+                b[id]=b[id]+dep
+            if ch==2:
+                wit=int(input('\n ENTER WITHDRAW AMOUNT \n'))
+                b[id]=b[id]-wit
+            if ch==3:
+                print('\n BALANCE: \n',b[id])
+            if ch==4:
+                d[id]=int(input('\n ENTER NEW PASSWORD \n'))
+            if ch>=5:
+                break
+            c=int(input('\n DO YOU WISH TO CONTINUE: 1 for YES \t 2 for NO \n'))            
+    else:
+        print('\n Wrong Password \n')
