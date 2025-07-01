@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int max,i,prev=0,en[10]={200,20,5,100,0}, ex[10]={10,20,5,0,0};
+	for(i=0; i<5; i++)
+	{
+		if(prev<(prev+en[i]-ex[i]))
+			{
+				max=i;	prev=prev+en[i]-ex[i];
+			}
+	}
+	printf("HOUR: %d \n", max+1);
+	return 0;
+}
