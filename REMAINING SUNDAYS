@@ -1,0 +1,49 @@
+#include<stdio.h>
+int main()
+{
+	int d,n,k;
+	printf("M T W TH F S S");
+	scanf(" \n %d  %d",&d,&n);
+	switch(d){
+		case 1:
+		{	
+			k=6;break;
+		}	
+		case 2:
+		{	
+			k=5;break;	
+		}
+	
+		case 3:
+		{	
+		k=4;break;
+		}
+		case 4:
+			{
+			k=3;break;
+			}
+		case 5:
+			{
+				k=2; break;
+			}
+			
+		case 6:
+			{
+				k=1; break;
+			}
+			
+		case 7:
+			{
+			k=0; break;
+			}
+			
+		default:
+		{ break;}	
+	}		
+	n=n-k;
+	int m=1+n/7;
+	if(d==7)	printf("\n %d \n",m-1);	
+	else printf("\n %d \n",m);
+	
+	return 0;
+}
