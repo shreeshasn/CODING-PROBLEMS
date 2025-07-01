@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int n,a[n],k,c,f,count,i;
+	printf("Enter Array Elements for size:?  \nEnter DAY:   \nENTER FINE AMT:  \n");
+	scanf("%d %d %d",&n,&k,&c);
+	for(i=0; i<n; i++)
+	{
+		scanf("%d \n",&a[i]);
+		if(k%2==0 && a[i]%2==0)
+			count++;	
+		else if(k%2==1 && a[i]%2==1)
+			count++;
+	}
+	printf("TOTAl cost FINE: %d \n", count*c);
+	return 0;	
+}
