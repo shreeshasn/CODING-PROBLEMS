@@ -1,0 +1,39 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n=5, f[n], b[n],i,j,max,total;
+    int a[5]={10,0,0,0,10};
+    max=0;
+    for(j=0;j<n;j++)
+    {
+        if(max<=a[j])    
+        {
+            max=a[j];   f[j]=max;
+        }
+        else
+            f[j]=max;
+    }
+    max=0;
+    for(j=n-1;j>=0;j--)
+    {
+        if(max<=a[j])    
+        {
+            max=a[j];   b[j]=max;
+        }
+        else
+            b[j]=max;
+    }
+    int min=0;
+    for(i=0;i<n;i++)
+    {
+        if(f[i]<=b[i])   min=f[i];
+        else min=b[i];
+        int k=min-a[i];
+        total=total+abs(k);
+    }
+    printf("TOTAL AMOUNT OF WATER:%d \n", total);
+    
+    return 0;
+}
