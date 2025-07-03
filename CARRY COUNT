@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int a = 999, b = 888, carry = 0, count = 0;
+    while (a > 0 || b > 0) {
+        if ( (a%10 + b%10 + carry) >= 10) {
+            carry = 1;
+            if(a>10 || b>10)    
+                    carrycount
+        }
+        a /= 10;  b /= 10;
+    }
+    printf("%d\n", carryCount);
+    return 0;
+}
