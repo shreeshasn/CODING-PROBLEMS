@@ -1,0 +1,22 @@
+def ang(s1,s2):
+    d1,d2={},{}
+    for i in s1:
+        d1[i]=d1.get(i,0)+1
+    for i in s2:
+        d2[i]=d2.get(i,0)+1
+    if d1==d2 and s1!=s2:
+        return True 
+    else:
+        return False
+
+inp=input('ENTER COMMA-SPACE SEPARATED WORDS: \n')
+l=inp.split(", ")
+t=l
+
+for i in l:
+    print('WORD:',i)
+    for j in t:
+        if ang(i,j):
+            print(j,end=" ")
+            t.remove(j)
+    print('\n')
