@@ -1,0 +1,8 @@
+s1,s2=input('ENTER STRING 1: '),input('ENTER STRING 2: ')
+d1,d2={},{}
+for i in s1:
+    d1[i]=d1.get(i,0)+1
+for i in s2:
+    d2[i]=d2.get(i,0)+1
+print('ANAGRAM') if d1==d2 and s1!=s2 else print('NOT ANAGRAM')
+
