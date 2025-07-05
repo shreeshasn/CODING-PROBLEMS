@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+
+    int a[]={1,3,2,0,10,7,5};
+    int n= 7;
+    int jump=0; 
+    int i=0;
+
+    while(i<n){
+        if(a[i]==0){
+            printf("-1");
+            return 0;
+        }
+
+        else{
+        i = i +a[i];
+        jump++;
+        }
+    } 
+
+    printf("%d",jump);
+    return 0;
+}
